@@ -1,16 +1,15 @@
 import Image from 'next/image';
 import Header from './_components/Header';
-import './globals.css';
-import Hero from './_components/Hero';
+import AboutMe from './_components/AboutMe';
 import Spacing from './_components/Spacing';
 import Status from './_components/Status';
 
 export default function Home() {
   return (
-    <main className=" bg-gray-800">
+    <main className="">
       <Header />
       <Spacing size="md" />
-      <Hero />
+      <AboutMe />
       <Spacing size="md" />
       <Status />
     </main>

@@ -1,10 +1,9 @@
-@import 'tailwindcss';
-
-@plugin "tailwindcss-animate";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @custom-variant dark (&:is(.dark *));
-@import 'tailwindcss/preflight';
-@tailwind utilities;
+/*@import 'tailwindcss/preflight';*/
 
 @theme inline {
   --color-background: var(--background);
@@ -47,6 +46,23 @@
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* For Firefox. */
+  * {
+    scrollbar-width: none;
+  }
+
+  /* For WebKit (Chrome & Safari). */
+  ::-webkit-scrollbar {
+    display: none;
+  }
   :root {
     --background: oklch(0.141 0.005 285.823);
     --foreground: oklch(0.985 0 0);
@@ -81,11 +97,21 @@
     --sidebar-ring: oklch(0.552 0.016 285.938);
     --radius: 0.5rem;
   }
-  * {
-    @apply border-border outline-ring/50 focus:outline-none;
+  Section,
+  .border-frame {
+    @apply border ring-gray-500/50 focus:outline-none;
   }
 
-  body {
-    @apply bg-background text-foreground antialiased;
+  AboutMe,
+  Header,
+  Status {
+    @apply bg-neutral-900 text-white antialiased;
+  }
+
+  /* styles/reset.css */
+  @layer components {
+    .no-global-style {
+      @apply border-0 ring-0 focus:outline-none;
+    }
   }
 }

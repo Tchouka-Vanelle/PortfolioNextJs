@@ -20,16 +20,16 @@ const Code = ({ className, ...props }: ComponentPropsWithoutRef<'span'>) => {
   );
 };
 
-const Hero = () => {
+const AboutMe = () => {
   return (
-    <Section className="flex max-md:flex items-center gap-4">
-      <div className="flex-[3] w-full flex flex-col gap-2">
-        <h2 className="font-caption font-bold text-5xl text-primary">
+    <Section className="flex max-md:flex items-center gap-4 mx-8 my-8 m-8 ml-4">
+      <div className="flex-[3] w-full flex flex-col gap-2 mx-4">
+        <h2 className="font-caption font-bold text-4xl text-primary mt-4">
           TCHOUKA Vanelle
         </h2>
-        <Spacing size="sm" />
+        <Spacing size="xs" />
         <h3 className="text-3xl font-caption"> Applications developper </h3>
-        <Spacing size="sm" />
+        <Spacing size="xs" />
         <p className="text-base">
           I am passionate about developing applications especially in modern web
           solutions. With experience in front-end and back-end development, I
@@ -56,7 +56,7 @@ const Hero = () => {
           achievements, do not hesitate to contact me!
         </p>
       </div>
-      <div className="flex-[2] max-md:m-auto ml-auto">
+      <div className="flex-[1] max-md:m-auto ml-auto">
         <img
           src="../images/web_dev.jpg"
           className="w-full h-auto max-w-xs max-md:w-56"
@@ -67,4 +67,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default AboutMe;
