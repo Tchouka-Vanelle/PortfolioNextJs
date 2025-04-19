@@ -1,12 +1,12 @@
 import React, { ComponentPropsWithoutRef } from 'react';
 
-const Flutter: React.FC<
+const ReactNextjs: React.FC<
   { size?: number } & ComponentPropsWithoutRef<'img'>
 > = ({ size = 50, ...props }) => {
   return (
     <img
-      src="/images/flutter.svg"
-      alt="Side Project 3"
+      src="/images/nextjs.svg"
+      alt="Side Project 1"
       width={size}
       height={size}
       {...props}
@@ -14,4 +14,4 @@ const Flutter: React.FC<
   );
 };
 
-export default Flutter;
+export default ReactNextjs;

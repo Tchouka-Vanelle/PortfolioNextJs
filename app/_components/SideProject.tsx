@@ -6,8 +6,25 @@ import Angular from './icons/Angular';
 import Java from './icons/Java';
 import Php from './icons/Php';
 import Javascript from './icons/Javascript';
+import { Badge } from '@/components/ui/badge';
+import Django from './icons/Django';
+import ReactNextjs from './icons/ReactNextjs';
 
 export const SIDE_PROJECTS: SideProjectProps[] = [
+  {
+    logo: ReactNextjs,
+    title: 'My Portfolio',
+    description: 'My portfolio in nextjs and react',
+    url: 'https://github.com/Tchouka-Vanelle/PortfolioNextJs',
+    inProgress: true,
+  },
+  {
+    logo: Django,
+    title: 'E commerce Exchange',
+    description: 'Django application or one can reply or post an ad',
+    url: 'https://github.com/jordantatue/k_zone',
+    inProgress: true,
+  },
   {
     logo: Flutter,
     title: 'E commerce App',
@@ -19,14 +36,12 @@ export const SIDE_PROJECTS: SideProjectProps[] = [
     title: 'E commerce shop',
     description: 'A website in react',
     url: 'https://github.com/Tchouka-Vanelle/react_cart/tree/main/src',
-    perso: true,
   },
   {
     logo: Angular,
     title: 'Appliance management',
     description: 'Angular application',
     url: 'https://github.com/Tchouka-Vanelle/gestionAppareils',
-    perso: true,
   },
   {
     logo: Java,
@@ -45,7 +60,6 @@ export const SIDE_PROJECTS: SideProjectProps[] = [
     title: 'Meteo by location',
     description: 'A javascript site to know the weather',
     url: '/',
-    perso: true,
   },
 ];
 
@@ -54,7 +68,7 @@ export type SideProjectProps = {
   title: string;
   description: string;
   url: string;
-  perso?: boolean;
+  inProgress?: boolean;
 };
 export const SideProject = (props: SideProjectProps) => {
   return (
@@ -69,6 +83,11 @@ export const SideProject = (props: SideProjectProps) => {
       <div>
         <div className="flex items-center gap-2 ">
           <p className="text-lg font-semibold">{props.title}</p>
+          {props.inProgress && (
+            <Badge className="text-xs text-accent-foreground bg-accent rounded-sm px-2 py-1">
+              In Progress
+            </Badge>
+          )}
           <ArrowUpRight size={16} className="border-frame" />
         </div>
 
