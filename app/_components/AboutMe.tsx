@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import ReactIcon from './icons/ReactIcon';
 import RustIcon from './icons/RustIcon';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Code = ({ className, ...props }: ComponentPropsWithoutRef<'span'>) => {
   return (
@@ -57,8 +58,10 @@ const AboutMe = () => {
         </p>
       </div>
       <div className="flex-[1] max-md:m-auto ml-auto">
-        <img
-          src="../images/web_dev.jpg"
+        <Image
+          src="/images/web_dev.jpg"
+          width={500}
+          height={500}
           className="w-full h-auto max-w-xs max-md:w-56"
           alt="melvyn's picture"
         />

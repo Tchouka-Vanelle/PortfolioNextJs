@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { PropsWithChildren } from 'react';
 
 const Section = (props: PropsWithChildren<{ className?: string }>) => {

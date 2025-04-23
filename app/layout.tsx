@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { GeistSans } from 'geist/font/sans';
 import { Anek_Kannada } from 'next/font/google';
 import './globals.css';
 

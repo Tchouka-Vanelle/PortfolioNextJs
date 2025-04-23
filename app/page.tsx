@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Header from './_components/Header';
 import AboutMe from './_components/AboutMe';
 import Spacing from './_components/Spacing';
