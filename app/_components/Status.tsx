@@ -1,15 +1,6 @@
 import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import React from 'react';
-import Flutter from './icons/Flutter';
-import CreateReactApp from './icons/CreateReactApp';
-import Java from './icons/Java';
-import Php from './icons/Php';
-import Javascript from './icons/Javascript';
-import Link from 'next/link';
 import Section from './Section';
-import { ArrowUpRight } from 'lucide-react';
-import Angular from './icons/Angular';
 import { SIDE_PROJECTS, SideProject } from './SideProject';
 import { Work, WORKS } from './Work';
 import { ContactCard } from './ContactCard';
