@@ -1,5 +1,4 @@
 import React, { ComponentPropsWithoutRef } from 'react';
-import Image from 'next/image';
 
 const Angular: React.FC<
   { size?: number } & ComponentPropsWithoutRef<'img'>
